@@ -1,0 +1,1 @@
+As always, start early and ask questions.  It is possible I may have missing requirements or not stated some clearly.  Welcome to software in the real world where gathering requirements and figuring out what to build is sometimes the hardest part of software development.
