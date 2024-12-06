@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Driver.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Driver.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">org</span><span class="s2">.</span><span class="s1">howard</span><span class="s2">.</span><span class="s1">edu</span><span class="s2">.</span><span class="s1">lsp</span><span class="s2">.</span><span class="s1">assignment5</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Driver </span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">IntegerSet set1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">IntegerSet</span><span class="s2">();</span>
+        <span class="s1">set1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s3">1</span><span class="s2">);</span>
+        <span class="s1">set1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s3">2</span><span class="s2">);</span>
+        <span class="s1">set1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s3">3</span><span class="s2">);</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Value of Set1: &quot; </span><span class="s2">+ </span><span class="s1">set1</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Smallest value in Set1: &quot; </span><span class="s2">+ </span><span class="s1">set1</span><span class="s2">.</span><span class="s1">smallest</span><span class="s2">());</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Largest value in Set1: &quot; </span><span class="s2">+ </span><span class="s1">set1</span><span class="s2">.</span><span class="s1">largest</span><span class="s2">());</span>
+
+        <span class="s1">IntegerSet set2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">IntegerSet</span><span class="s2">();</span>
+        <span class="s1">set2</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s3">3</span><span class="s2">);</span>
+        <span class="s1">set2</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s3">4</span><span class="s2">);</span>
+        <span class="s1">set2</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s3">5</span><span class="s2">);</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Value of Set2: &quot; </span><span class="s2">+ </span><span class="s1">set2</span><span class="s2">);</span>
+
+        <span class="s1">set1</span><span class="s2">.</span><span class="s1">union</span><span class="s2">(</span><span class="s1">set2</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Union of Set1 and Set2: &quot; </span><span class="s2">+ </span><span class="s1">set1</span><span class="s2">);</span>
+
+        <span class="s1">set1</span><span class="s2">.</span><span class="s1">intersect</span><span class="s2">(</span><span class="s1">set2</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Intersection of Set1 and Set2: &quot; </span><span class="s2">+ </span><span class="s1">set1</span><span class="s2">);</span>
+
+        <span class="s1">set1</span><span class="s2">.</span><span class="s1">diff</span><span class="s2">(</span><span class="s1">set2</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Difference (Set1 - Set2): &quot; </span><span class="s2">+ </span><span class="s1">set1</span><span class="s2">);</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Is Set1 empty? &quot; </span><span class="s2">+ </span><span class="s1">set1</span><span class="s2">.</span><span class="s1">isEmpty</span><span class="s2">());</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
